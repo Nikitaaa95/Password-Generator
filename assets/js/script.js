@@ -13,6 +13,12 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+// Array of options for computer to pick from
+var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var uppercase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+var specialcharacters = ["!", "@", "#", "$", "%", "^", "&", "*"]
+
 
 //Generate pop-ups showing up for the following
 ///Length of characters
@@ -25,4 +31,5 @@ generateBtn.addEventListener("click", writePassword);
 //Generate password based on provided characteristics
 ///List specific number of characters
 ////For each character, cycle through the available options.
+/////List options
 
