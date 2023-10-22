@@ -34,10 +34,14 @@ else if (characterlimit > 128) {
     return;
 }
 else {
-    var lowercaselimit = window.prompt("Can the password include lowercase letters? (Y or N)")
-var uppercaselimit = window.prompt("Can the password include uppercase letters? (Y or N)")
-var numberlimit = window.prompt("Can the password include numbers? (Y or N)")
-var spclchrlimit = window.prompt("Can the password include special characters? (Y or N)")
+    var lowercaselimit = window.prompt("Can the password include lowercase letters? (Y or N)");
+    lowercaselimit  = lowercaselimit.toUpperCase();
+var uppercaselimit = window.prompt("Can the password include uppercase letters? (Y or N)");
+uppercaselimit = uppercaselimit.toUpperCase();
+var numberlimit = window.prompt("Can the password include numbers? (Y or N)");
+numberlimit = numberlimit.toUpperCase();
+var spclchrlimit = window.prompt("Can the password include special characters? (Y or N)");
+spclchrlimit = spclchrlimit.toUpperCase();
 
 //Validation of at least 1 option
 if (lowercaselimit != "Y" && uppercaselimit != "Y" && numberlimit != "Y" && spclchrlimit != "Y") {
