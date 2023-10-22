@@ -10,7 +10,7 @@ function writePassword() {
 
 }
 
-// Add event listener to generate button
+// Notes from Course - Add event listener to generate button
 // generateBtn.addEventListener("click", writePassword);
 
 // Array of options for computer to pick from
@@ -33,13 +33,13 @@ else if (characterlimit > 128) {
     window.alert("Please choose a number between 8 and 128");
     return;
 }
-else if (typeof characterlimit != 'number') {
+else if (!typeof characterlimit == 'number') {
     window.alert("Please choose a number between 8 and 128");
     return;
 }
 else {
-    var lowercaselimit = window.prompt("Can the password include lowercase letters? (Y or N)");
-    lowercaselimit  = lowercaselimit.toUpperCase();
+var lowercaselimit = window.prompt("Can the password include lowercase letters? (Y or N)");
+lowercaselimit  = lowercaselimit.toUpperCase();
 var uppercaselimit = window.prompt("Can the password include uppercase letters? (Y or N)");
 uppercaselimit = uppercaselimit.toUpperCase();
 var numberlimit = window.prompt("Can the password include numbers? (Y or N)");
@@ -59,7 +59,11 @@ window.alert ("working")
 
 
 
-//Validate that at least one selection has been chosen
+
+// var index = Math.floor(Math.random() * characterlimit.length);
+// var pswdchr = characterlimit[index];
+// console.log(pswdchr)
+
 //Generate password based on provided characteristics
 ///List specific number of characters
 ////For each character, cycle through the available options.
