@@ -19,6 +19,22 @@ var uppercase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P"
 var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 var specialcharacters = ["!", "@", "#", "$", "%", "^", "&", "*"]
 
+//User Prompts HAVE TRIGGERED BY BUTTON LATER
+var characterlimit = window.prompt("How many characters do you need?");
+
+
+//Character Limit Prompt Actions
+if (characterlimit < 8 ) {
+    window.alert("Please choose a number between 8 and 128");
+}
+else if (characterlimit > 128) {
+    window.alert("Please choose a number between 8 and 128");
+    characterlimit
+}
+
+else {
+    var lowercaselimit = window.prompt("Can the password include lowercase letters?")
+}
 
 //Generate pop-ups showing up for the following
 ///Length of characters
