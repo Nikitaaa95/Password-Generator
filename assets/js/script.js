@@ -35,23 +35,22 @@ else if (characterlimit > 128) {
 }
 else {
     var lowercaselimit = window.prompt("Can the password include lowercase letters? (Y or N)")
-lowercaselimit = lowercaselimit.toUpperCase();
-}
-
 var uppercaselimit = window.prompt("Can the password include uppercase letters? (Y or N)")
 var numberlimit = window.prompt("Can the password include numbers? (Y or N)")
 var spclchrlimit = window.prompt("Can the password include special characters? (Y or N)")
+
+//Validation of at least 1 option
+if (lowercaselimit != "Y" && uppercaselimit != "Y" && numberlimit != "Y" && spclchrlimit != "Y") {
+    window.alert ("At least one character type must be selected. Please try again.");
+    return;
+}
+else { 
+window.alert ("working")
+}}
 });
 
 
 
-//Generate pop-ups showing up for the following
-///Length of characters
-////Between 8 and 128
-///Inclusion of lowercase
-///Inclusion of uppercase
-///Inclusion of numbers
-///Inclusion of special characters
 //Validate that at least one selection has been chosen
 //Generate password based on provided characteristics
 ///List specific number of characters
