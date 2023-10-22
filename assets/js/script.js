@@ -30,12 +30,18 @@ if (characterlimit < 8 ) {
 }
 else if (characterlimit > 128) {
     window.alert("Please choose a number between 8 and 128");
-    characterlimit
 }
-
 else {
-    var lowercaselimit = window.prompt("Can the password include lowercase letters?")
+    var lowercaselimit = window.prompt("Can the password include lowercase letters? (Y or N)")
+    
 }
+lowercaselimit = lowercaselimit.toUpperCase();
+if (lowercaselimit === Yes) {
+
+} 
+var uppercaselimit = window.prompt("Can the password include uppercase letters? (Y or N)")
+var numberlimit = window.prompt("Can the password include numbers? (Y or N)")
+var spclchrlimit = window.prompt("Can the password include special characters? (Y or N)")
 });
 
 
