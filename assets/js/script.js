@@ -33,6 +33,10 @@ else if (characterlimit > 128) {
     window.alert("Please choose a number between 8 and 128");
     return;
 }
+else if (typeof characterlimit != 'number') {
+    window.alert("Please choose a number between 8 and 128");
+    return;
+}
 else {
     var lowercaselimit = window.prompt("Can the password include lowercase letters? (Y or N)");
     lowercaselimit  = lowercaselimit.toUpperCase();
