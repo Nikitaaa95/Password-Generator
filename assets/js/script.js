@@ -11,7 +11,7 @@ function writePassword() {
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+// generateBtn.addEventListener("click", writePassword);
 
 // Array of options for computer to pick from
 var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -20,10 +20,11 @@ var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 var specialcharacters = ["!", "@", "#", "$", "%", "^", "&", "*"]
 
 //User Prompts HAVE TRIGGERED BY BUTTON LATER
-var characterlimit = window.prompt("How many characters do you need?");
 
-
-//Character Limit Prompt Actions
+//Button trigger
+generateBtn.addEventListener('click', function() {
+    var characterlimit = window.prompt("How many characters do you need?");
+    //Character Limit Prompt Actions
 if (characterlimit < 8 ) {
     window.alert("Please choose a number between 8 and 128");
 }
@@ -35,6 +36,8 @@ else if (characterlimit > 128) {
 else {
     var lowercaselimit = window.prompt("Can the password include lowercase letters?")
 }
+});
+
 
 //Generate pop-ups showing up for the following
 ///Length of characters
