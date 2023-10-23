@@ -1,18 +1,16 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+// Notes from Course - Add event listener to generate button
+
 // Write password to the #password input
 // function writePassword() {
 //   var password = generatePassword();
 //   var passwordText = document.querySelector("#password");
-
 //   passwordText.value = password;
 // }
-
-// Notes from Course - Add event listener to generate button
 // generateBtn.addEventListener("click", writePassword);
 
-//User Prompts HAVE TRIGGERED BY BUTTON LATER
 
 //Button trigger
 generateBtn.addEventListener('click', function() {
@@ -73,6 +71,7 @@ if (spclchrlimit == "Y") {
 console.log(characterlimit);
 console.log(passwordText);
 
+//Problem Area
 function passwordfunc(n) { 
     let str = ''; 
   
@@ -85,6 +84,7 @@ function passwordfunc(n) {
   
     return str; 
 } 
+//Problem Area end, hopefully
   
 const passwordfinal = passwordfunc(characterlimit); 
 console.log(password);
@@ -93,4 +93,7 @@ console.log(password);
 var passworddisplayEl = document.createElement("h3");
 passworddisplayEl.textContent = passwordfinal
 password.appendChild(passworddisplayEl)
+
+//Possible window alert option
+//window.alert = passwordfinal
 })
