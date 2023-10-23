@@ -2,12 +2,12 @@
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+// function writePassword() {
+//   var password = generatePassword();
+//   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
-}
+//   passwordText.value = password;
+// }
 
 // Notes from Course - Add event listener to generate button
 // generateBtn.addEventListener("click", writePassword);
@@ -52,26 +52,53 @@ if (lowercaselimit != "Y" && uppercaselimit != "Y" && numberlimit != "Y" && spcl
     window.alert("At least one character type must be selected. Please try again.");
     return;
 }
+let lcpassword = "";
 if (lowercaselimit == "Y"){  
     // Get random index from array of options
   var indexl = Math.floor(Math.random() * lowercase.length);
-  var lcpassword = lowercase[indexl]
-  
+lcpassword = lowercase[indexl]
 }
+
+let ucpassword = "";
 if (uppercaselimit == "Y") {
-  var indexu = Math.floor(Math.random() * uppercase.length);
-  var ucpassword = uppercase[indexu]
+var indexu = Math.floor(Math.random() * uppercase.length);
+ucpassword = uppercase[indexu];
 }
+
+let npassword = "";
 if (numberlimit == "Y") {
     var indexn = Math.floor(Math.random() * numbers.length);
-    var npassword = numbers(indexn)
+    npassword = numbers(indexn);
 }
+
+let spassword = "";
 if (spclchrlimit == "Y") {
     var indexs = Math.floor(Math.random() * spclchr.length);
-    var spassword = spclchr(indexs)
+    spassword = spclchr(indexs);
 }
-console.log(lcpassword)
-console.log(ucpassword)
-console.log(npassword)
-console.log(spassword)
+console.log(lcpassword);
+console.log(ucpassword);
+console.log(npassword);
+console.log(spassword);
+
+// function getString(n) { 
+//     let str = ''; 
+//     const chrpass =  
+//         'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'; 
+//     const chrpassLen = chrpass.length; 
+  
+//     for (let i = 0; i < n; i++) { 
+  
+//         // Generating a random index 
+//         const passidx = Math.floor(Math.random() * chrpassLen); 
+  
+//         str += chrpass.charAt(passidx); 
+//     } 
+  
+//     return str; 
+// } 
+  
+// const result = getString(characterlimit); 
+// console.log(result);
+
 })
