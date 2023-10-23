@@ -1,0 +1,32 @@
+ // True Character Array for final password
+ var pswdtext = []
+ // lowercase dependancy
+ if (lowercaselimit = "Y") {
+     var lcpassword = [...pswdtext, ...lowercase];
+ }
+ else {
+     var lcpassword = [...pswdtext];
+ }
+
+ /// uppercase dependancy
+ if (uppercaselimit = "Y") {
+     var ucpassword = [...lcpassword, ...uppercase];
+ }
+ else {
+     var ucpassword = [...lcpassword];
+ }
+ 
+ /// number dependancy
+ if (numberlimit = "Y") {
+     var npassword = [...ucpassword, ...numbers];
+ }
+ else {
+     var npassword = [...ucpassword];
+ }
+
+ ///spcl character dependancy
+ if (spclchrlimit = "Y") {
+     var spcpassword = [...npassword, ...spclchr];
+ }
+ else {
+     var spcpassword = [...npassword]
