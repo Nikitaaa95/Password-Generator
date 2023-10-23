@@ -43,7 +43,7 @@ else {
     // Array of options for computer to pick from
 var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var uppercase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
-var numbers = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+var numbercase = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var spclchr = ["!", "@", "#", "$", "%", "^", "&", "*"];
 
 
@@ -52,53 +52,41 @@ if (lowercaselimit != "Y" && uppercaselimit != "Y" && numberlimit != "Y" && spcl
     window.alert("At least one character type must be selected. Please try again.");
     return;
 }
-let lcpassword = "";
+let passwordText = "";
 if (lowercaselimit == "Y"){  
     // Get random index from array of options
-  var indexl = Math.floor(Math.random() * lowercase.length);
-lcpassword = lowercase[indexl]
+  passwordText = [...passwordText, ...lowercase];
 }
 
-let ucpassword = "";
 if (uppercaselimit == "Y") {
-var indexu = Math.floor(Math.random() * uppercase.length);
-ucpassword = uppercase[indexu];
+    passwordText = [...passwordText, ...uppercase];
 }
 
-let npassword = "";
 if (numberlimit == "Y") {
-    var indexn = Math.floor(Math.random() * numbers.length);
-    npassword = numbers(indexn);
+    passwordText = [...passwordText, ...numbercase];
 }
 
-let spassword = "";
 if (spclchrlimit == "Y") {
-    var indexs = Math.floor(Math.random() * spclchr.length);
-    spassword = spclchr(indexs);
+    passwordText = [...passwordText, ...spclchr];
 }
-console.log(lcpassword);
-console.log(ucpassword);
-console.log(npassword);
-console.log(spassword);
 
-// function getString(n) { 
-//     let str = ''; 
-//     const chrpass =  
-//         'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'; 
-//     const chrpassLen = chrpass.length; 
+console.log(characterlimit);
+console.log(passwordText);
+
+function passwordfunc(n) { 
+    let str = ''; 
   
-//     for (let i = 0; i < n; i++) { 
+    for (let i = 0; i < n; i++) { 
   
-//         // Generating a random index 
-//         const passidx = Math.floor(Math.random() * chrpassLen); 
+        const randomchr = Math.floor(Math.random() * passwordText.length); 
   
-//         str += chrpass.charAt(passidx); 
-//     } 
+        str += characters.charAt(randomchr); 
+    } 
   
-//     return str; 
-// } 
+    return str; 
+} 
   
-// const result = getString(characterlimit); 
-// console.log(result);
+const password = passwordfunc(characterlimit); 
+console.log(password);
 
 })
