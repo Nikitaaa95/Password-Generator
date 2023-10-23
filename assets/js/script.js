@@ -86,7 +86,11 @@ function passwordfunc(n) {
     return str; 
 } 
   
-const password = passwordfunc(characterlimit); 
+const passwordfinal = passwordfunc(characterlimit); 
 console.log(password);
 
+//Incorporate response in HTML (hypothetical)
+var passworddisplayEl = document.createElement("h3");
+passworddisplayEl.textContent = passwordfinal
+password.appendChild(passworddisplayEl)
 })
