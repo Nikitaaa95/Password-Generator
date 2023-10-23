@@ -1,3 +1,27 @@
+# Password Generator
+
+## Description
+
+The purpose of this site is for the user to come to the site and build a non-predictive password
+ meeting the criteria they need for any third party program they might be using. The site is 
+ seeking to relieve the user from the work of creating that password.
+
+I learned a lot more about Arrays and establishing strings, but I will be looking to 
+learn more as there are things to improve with the site. The code works in theater and was working 
+in my test with simpler values, but I can't figure out why it isn't working now.
+
+## Usage
+
+The user can click the "Generate Password" button. Then they will be prompted by a series of 
+queries to define their password requirements. Once they've gone through the prompts, the 
+site should provide them with a valid password.
+
+![Screenshot](assets/images/Website.png)
+![Screenshot](assets/images/Prompt.png)
+
+## Credits
+
+Please see the following sites that were used in my research for this project:
 Array Set-up
 https://javascript.plainenglish.io/create-an-array-of-alphabet-characters-in-javascript-with-this-simple-trick-930033079dd3
 
