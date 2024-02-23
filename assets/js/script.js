@@ -38,26 +38,6 @@ if (lowercaselimit != "Y" && uppercaselimit != "Y" && numberlimit != "Y" && spcl
     window.alert("At least one character type must be selected. Please try again.");
     return;
 }
-let passwordText = "";
-if (lowercaselimit == "Y"){  
-    // Get random index from array of options
-  passwordText = [...passwordText, ...lowercase];
-}
-
-if (uppercaselimit == "Y") {
-    passwordText = [...passwordText, ...uppercase];
-}
-
-if (numberlimit == "Y") {
-    passwordText = [...passwordText, ...numbercase];
-}
-
-if (spclchrlimit == "Y") {
-    passwordText = [...passwordText, ...spclchr];
-}
-
-console.log(characterlimit);
-console.log(passwordText);
 
 //Problem Area
 function passwordfunc(n) { 
@@ -87,8 +67,7 @@ password.appendChild(passworddisplayEl)
 })
 
 //Button trigger
-generateBtn.addEventListener('click', function() {
-    var characterlimit = window.prompt("How many characters do you need?");
+   var characterlimit = window.prompt("How many characters do you need?");
 
     //Character Limit Prompt Actions
 if (characterlimit < 8 ) {
@@ -97,4 +76,14 @@ if (characterlimit < 8 ) {
 else if (characterlimit > 128) {
     window.alert("Please choose a number between 8 and 128");
     return;}
-else {
+
+  
+  function writePassword() {
+    var password = generatePassword();
+    var passwordText = document.querySelector("#password");
+  
+    passwordText.value = password;
+  }
+  
+
+  generateBtn.addEventListener("click", writePassword);   
