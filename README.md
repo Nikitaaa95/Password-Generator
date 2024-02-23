@@ -60,3 +60,6 @@ https://www.geeksforgeeks.org/javascript-program-for-generating-a-string-of-spec
 
 Random Code generations
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/padStart
+
+Learning the JS Addition for Arrays
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Addition_assignment
